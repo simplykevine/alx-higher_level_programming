@@ -10,14 +10,20 @@ Status: Not yet submitted.
 '''
 
 
-def text_indentation(text):
-    '''Fucntion to bring the texts'''
-    if type(text) != str:
-        raise TypeError("text must be a string")
+def print_square(size):
+    """Print a square with the # character.
 
-    for delim in ".:?":
-        text = (delim + "\n\n").join(
-            [line.strip(" ") for line in text.split(delim)]
-        )
+    Args:
+        size (int): The height/width of the square.
+    Raises:
+        TypeError: If size is not an integer.
+        ValueError: If size is < 0
+    """
+    if not isinstance(size, int):
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
-    print("{}".format(text), end="")
+    for i in range(size):
+        [print("#", end="") for j in range(size)]
+        print("")
