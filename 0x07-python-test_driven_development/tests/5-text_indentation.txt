@@ -1,50 +1,23 @@
-'''
-# Import the required function
->>> from importlib import import_module
->>> text_indentation = import_module('5-text_indentation').text_indentation
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 
-# Valid arguments
->>> text_indentation('Is there anyone who loves pain itself? \t\t\t          who seeks after it and wants to have it? simply because it is pain?')
-Is there anyone who loves pain itself?
-<BLANKLINE>
-who seeks after it and wants to have it?
-<BLANKLINE>
-simply because it is pain?
-<BLANKLINE>
->>> text_indentation('Is there anyone \n\t\t  who loves pain itself? \t\t\t          who seeks after it and wants to have it? simply because it is pain?')
-Is there anyone
-who loves pain itself?
-<BLANKLINE>
-who seeks after it and wants to have it?
-<BLANKLINE>
-simply because it is pain?
-<BLANKLINE>
->>> text_indentation('\nIs there anyone \n\t\t  who loves pain itself?')
-<BLANKLINE>
-Is there anyone
-who loves pain itself?
-<BLANKLINE>
->>> text_indentation('\nIs there any.?\none \n\t\t  who loves pain itself?')
-<BLANKLINE>
-Is there any.
-<BLANKLINE>
-?
-<BLANKLINE>
-<BLANKLINE>
-one
-who loves pain itself?
-<BLANKLINE>
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-# Invalid arguments
->>> try:
-...     text_indentation(45)
-... except TypeError as ex:
-...     print(ex.args[0])
-text must be a string
->>> try:
-...     text_indentation(b'What?He was 22.')
-... except TypeError as ex:
-...     print(ex.args[0])
-text must be a string
+>>> text_indentation("Holberton. School? How are you: John")
+Holberton.
+<BLANKLINE>
+School?
+<BLANKLINE>
+How are you:
+<BLANKLINE>
+John
 
-'''
+>>> text_indentation(2)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("Aptech. School")
+Aptech.
+<BLANKLINE>
+School
