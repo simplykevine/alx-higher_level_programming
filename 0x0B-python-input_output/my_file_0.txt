@@ -2,3 +2,11 @@ We offer a truly innovative approach to education:
 focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers. 
 
 A school every software engineer would have dreamt of!
+<<<<<<< HEAD
+guillaume@ubuntu:~/0x0B$ ./0-main.py
+We offer a truly innovative approach to education:
+focus on building reliable applications and scalable systems, take on real-world challenges, collaborate with your peers. 
+
+A school every software engineer would have dreamt of!
+=======
+>>>>>>> ac29d63cff334bbaa7e293fd5b23ae2277de8381
